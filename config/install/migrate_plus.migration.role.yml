@@ -1,0 +1,16 @@
+id: role
+label: role
+source:
+  plugin: role
+  key: migrate
+  track_changes: true
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  name: name
+  field_roles_class: class
+  field_dram_id: id
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: roles

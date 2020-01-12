@@ -1,0 +1,23 @@
+id: track
+label: track
+source:
+  plugin: track
+  key: migrate
+  track_changes: true
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  title: title
+  field_dram_id: id
+  field_track_label:
+    plugin: migration_lookup
+    migration: label
+    source: label_id
+  field_track_release:
+    plugin: migration_lookup
+    migration: release
+    source: album_id
+destination:
+  plugin: "entity:node"
+  default_bundle: track

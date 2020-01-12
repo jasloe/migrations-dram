@@ -1,0 +1,20 @@
+id: label
+label: label
+source:
+  plugin: label
+  key: migrate
+  track_changes: true
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  title: name
+  field_dram_id: id
+  "field_label_description/format":
+    plugin: default_value
+    default_value: basic_html
+  "field_label_description/value": description
+
+destination:
+  plugin: "entity:node"
+  default_bundle: label

@@ -1,0 +1,12 @@
+id: person
+label: Person
+source:
+  plugin: person
+  key: migrate
+process:
+  title: name
+  field_dram_id: id
+  field_test: artist_item.item_id
+destination:
+  plugin: "entity:node"
+  default_bundle: person

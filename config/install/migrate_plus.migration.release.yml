@@ -1,0 +1,20 @@
+id: release
+label: Release
+source:
+  plugin: release
+  key: migrate
+  track_changes: true
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  title: title
+  field_dram_id: id
+  field_release_label:
+    plugin: migration_lookup
+    migration: label
+    source: label_id
+
+destination:
+  plugin: "entity:node"
+  default_bundle: release

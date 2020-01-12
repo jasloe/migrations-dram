@@ -1,0 +1,15 @@
+id: instrument
+label: instrument
+source:
+  plugin: instrument
+  key: migrate
+  track_changes: true
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  name: name
+  field_dram_id: id
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: instruments
